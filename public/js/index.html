@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JSChess</title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <link href="buttons.css.map" rel="stylesheet" type="text/css">
+        <link href="buttons.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript">if(!window.console) console = {log : function(){}};</script>
+    </head>
+    <body>
+        <header>
+            <a href="../index.html" class="btn-flip" data-back="Menu" data-front="Cool Chess"> </a>
+       <br> </br>
+        </header>
+        <div id="FenInDiv">
+            Fin:<br>
+            <input type="text" id="fenIn"/>
+            <button type="button" id="SetFen">Set Position</button>
+            <p>"Default position: rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"</p>
+        </div>
+    
+        <div id="Board"></div>
+        <div id="EngineOutput">Thinking Time: <br/>
+            <select id="ThinkTimeChoice">
+                <option value="1">1s</option>
+                <option value="2">2s</option>
+                <option value="4">4s</option>
+                <option value="6">6s</option>
+                <option value="8">8s</option>
+                <option value="10">10s</option>
+            </select><br/><br/><br/>
+            <span id="BestOut">BestMove:</span><br/>
+            <span id="DepthOut">Depth:</span><br/>
+            <span id="ScoreOut">Score:</span><br/>
+            <span id="NodesOut">Nodes:</span><br/>
+            <span id="OrderingOut">Ordering:</span><br/>
+            <span id="TimeOut">Time:</span><br/><br/>
+            <button type="button" id="SearchButton">Move Now</button><br/>
+            <button type="button" id="NewGameButton">New Game</button><br/>
+            <button type="button" id="FlipButton">Flip Board</button><br/><br/>
+            <button type="button" id="TakeButton">Take Back</button><br/><br/>
+            <span id="GameStatus"></span>
+        </div>
+
+        <script src="jquery-3.5.2.min.js"></script>
+        <script src="defs.js"></script>
+        <script src="io.js"></script>
+        <script src="board.js"></script>
+        <script src="movegen.js"></script>
+        <script src="makemove.js"></script>
+        <script src="evaluate.js"></script>
+        <script src="pvtable.js"></script>
+        <script src="search.js"></script>
+        <script src="perft.js"></script>
+        <script src="gui.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
